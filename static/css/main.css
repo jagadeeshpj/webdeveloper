@@ -320,8 +320,7 @@
       grid-area: name; }
     #contact-a .text-fields .subject-input {
       grid-area: subject; }
-    #contact-a .text-fields .email-input {
-      grid-area: email; }
+   
     #contact-a .text-fields .phone-input {
       grid-area: phone; }
     #contact-a .text-fields .message-input {
