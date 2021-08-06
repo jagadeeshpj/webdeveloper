@@ -19,7 +19,7 @@ $message = $_POST["message"];
 mail( 'jagadeeshbose2001@gmail.com' , 'New form submission' , 
 "New form submission: Name: $name, Email:$email ,subject: $subject, phone_number: $phone_number ,message : $message");
 
-header('Location: contact.html');
+
 
 if(empty($_POST['submit']))
 {
