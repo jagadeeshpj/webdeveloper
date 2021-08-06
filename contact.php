@@ -55,7 +55,7 @@
                          -->
                         
                         
-                        <a href="contact.html" class="current">Contact</a>
+                        <a href="contact.php" class="current">Contact</a>
                         
                     </li>
                     
@@ -182,7 +182,7 @@
     jQuery('#submit').html('Please wait');
     jQuery('#submit').attr('disabled',true);
     jQuery.ajax({
-      url:'submit.php',
+      url:'static/phpGmailSMTP/submit.php',
       type:'post',
       data:jQuery('#frmContactus').serialize(),
       success:function(result){
