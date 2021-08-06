@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
     $mail->Port = '587';
 
     $mail->setFrom('jagadeeshsylesh@gmail.com'); // Gmail address which you used as SMTP server
-    $mail->addAddress('jagadeeshsylesh@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+    $mail->addAddress('jagadeeshpj2001@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
     $mail->isHTML(true);
     $mail->Subject = 'Message Received (Contact Page)';
