@@ -4,16 +4,11 @@
 
 <head>
     <meta charset="UTF-8" />
-     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <link href="style.css" rel="stylesheet">
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="static/css/main.css"/>
     <link rel="stylesheet" href="static/css/media.css"/>
     <link rel="stylesheet" href="static/css/items_grid.css"/>
@@ -55,7 +50,7 @@
                          -->
                         
                         
-                        <a href="contact.php" class="current">Contact</a>
+                        <a href="contact.html" class="current">Contact</a>
                         
                     </li>
                     
@@ -71,7 +66,7 @@
     <h2 class="section-title">Contact Me</h2>
     <div class="bottom-line"></div>
     <p class="lead">Here is how you can reach me</p>
-    <form  method="POST" id="frmContactus" >
+    <form action="submit.php" method="POST">
       <input type="hidden" name="csrfmiddlewaretoken" value="CsGpgDMfSNlSafB1U8msuEVUjf0Qyvi4rVRh3kZpaZO3cXwSTFtTIEyu6OYvj9Us">
       <div class="text-fields">
         <!-- <input
@@ -112,7 +107,7 @@
 
 
       </div>
-      <button type="submit" class="btn-dark" id="submit" name="submit">Submit</button>
+      <button type="submit" class="btn-dark" name="contact_btn">Submit</button>
     </form>
   </div>
   </section>
@@ -176,27 +171,45 @@
 </footer>
 
 
-    <script>
-    jQuery('#frmContactus').on('submit',function(e){
-    jQuery('#msg').html('');
-    jQuery('#submit').html('Please wait');
-    jQuery('#submit').attr('disabled',true);
-    jQuery.ajax({
-      url:'static/phpGmailSMTP/submit.php',
-      type:'post',
-      data:jQuery('#frmContactus').serialize(),
-      success:function(result){
-        jQuery('#msg').html(result);
-        jQuery('#submit').html('Submit');
-        jQuery('#submit').attr('disabled',false);
-        jQuery('#frmContactus')[0].reset();
-      }
-    });
-    e.preventDefault();
-    });
-    </script>
     <script src="static/js/typewriter.js"></script>
+     <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+      $(function () {
+        new WOW().init();
+        // Add smooth scrolling to all links
+        $('a').on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
 </body>
 
 </html>
