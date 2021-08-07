@@ -54,9 +54,9 @@
                         
                     </li>
                    
-                   <li>
-                       <a href="static/resume/JAGADEESH P RESUME.pdf" class=" btn-dark resume-btn" download="JAGADEESH P RESUME">RESUME</a>
-                   </li>
+                  <li>
+                    <a href="static/resume/JAGADEESH P RESUME.pdf" download="JAGADEESH P RESUME">RESUME</a>
+                </li>
                     
                </ul>
            </nav>
