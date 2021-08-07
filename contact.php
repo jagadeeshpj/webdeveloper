@@ -50,9 +50,13 @@
                          -->
                         
                         
-                        <a href="contact.html" class="current">Contact</a>
+                        <a href="contact.php" class="current">Contact</a>
                         
                     </li>
+                   
+                   <li>
+                       <a href="static/resume/JAGADEESH P RESUME.pdf" class=" btn-dark resume-btn" download="JAGADEESH P RESUME">RESUME</a>
+                   </li>
                     
                </ul>
            </nav>
@@ -66,7 +70,7 @@
     <h2 class="section-title">Contact Me</h2>
     <div class="bottom-line"></div>
     <p class="lead">Here is how you can reach me</p>
-    <form action="submit.php" method="POST">
+    <form action="static/submit.php" method="POST">
       <input type="hidden" name="csrfmiddlewaretoken" value="CsGpgDMfSNlSafB1U8msuEVUjf0Qyvi4rVRh3kZpaZO3cXwSTFtTIEyu6OYvj9Us">
       <div class="text-fields">
         <!-- <input
