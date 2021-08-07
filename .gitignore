@@ -1,3 +1,6 @@
+vendor/
+.env
+
 git rm -r -f log
 rm 'log/development.log'
 rm 'log/production.log'
@@ -18,3 +21,6 @@ git rm -f db/*.sqlite3
 echo '*.sqlite3' >> .gitignore
 git add .gitignore
 git commit -m "ignored sqlite databases"
+
+
+
