@@ -67,7 +67,7 @@ function contact()
         $mail->isHTML(true);
 
         if ($mail->send()) {
-            Redirect_to("contact.php");
+            Redirect_to("work.html");
         } else {
             Redirect_to("index.php");
         }
