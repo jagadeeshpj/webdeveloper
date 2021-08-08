@@ -1,19 +1,15 @@
-<?php require 'static/PHPMailer/PHPMailerAutoload.php';?>
 <?php
-function Redirect_to($New_Location)
-{header("Location:" . $New_Location);
-    exit;
-}
 
 // call the contact() function if contact_btn is clicked
 if (isset($_POST['contact_btn'])) {
     contact();
 }
 
+
 function contact()
 {
     if (isset($_POST["contact_btn"])) {
-
+        include('smtp/PHPMailerAutoload.php');
         $name = $_POST["name"];
         $email = $_POST["email"];
         $subject = $_POST["subject"];
@@ -33,7 +29,7 @@ function contact()
 	$mail->Host       = "smtp.mailtrap.io"; // SMTP server example
 	$mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
-	$mail->Port       = 25;                    // set the SMTP port for the GMAIL server
+	$mail->Port       = 2525;                    // set the SMTP port for the GMAIL server
 	$mail->Username   = "dffb251aa1bba7"; 	// SMTP account username example
 	$mail->Password   = "82643e4f9e62db";        // SMTP account password example
 
@@ -67,13 +63,21 @@ function contact()
         $mail->isHTML(true);
 
         if ($mail->send()) {
-            Redirect_to("contact.php");
-        } else {
-            Redirect_to("index.php");
-        }
-
-    } //Ending of Submit Button If-Condition
+          echo header("Location:contact.php");
+          "Message could not be sent.  ";
+            echo "Mailer Error: " . $mail->ErrorInfo;
+            exit; 
+             }
 
 }
+}
 
-?>
+
+
+    ?>
+        
+        
+            
+
+
+
