@@ -105,7 +105,7 @@
         <tr><th><label for="id_name">Name:</label></th><td><input type="text" name="name" placeholder="Name" class="text-input name-input" maxlength="30" required id="id_name"></td></tr>
 <tr><th><label for="id_email">Email:</label></th><td><input type="email" name="email" placeholder="Email" class="text-input email-input" maxlength="254" required id="id_email"></td></tr>
 <tr><th><label for="id_subject">Subject:</label></th><td><input type="text" name="subject" placeholder="Subject" class="text-input subject-input" maxlength="100" required id="id_subject"></td></tr>
-<tr><th><label for="id_phone_number">Phone number:</label></th><td><input type="text" name="phone_number" placeholder="Phone" class="text-input phone-inputt" maxlength="20" required id="id_phone_number"></td></tr>
+<tr><th><label for="id_phone_number">Phone number:</label></th><td><input type="number" name="phone_number" placeholder="Phone" class="text-input phone-inputt" maxlength="20" required id="id_phone_number"></td></tr>
 <tr><th><label for="id_message">Message:</label></th><td><textarea name="message" cols="40" rows="10" placeholder="Message" class="text-input message-input" required id="id_message">
 </textarea></td></tr>
 
