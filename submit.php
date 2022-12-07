@@ -63,7 +63,7 @@ function contact()
         $mail->isHTML(true);
 
         if ($mail->send()) {
-          echo header("Location:contact.php");
+          echo header("Location:contact.html");
           "Message could not be sent.  ";
             echo "Mailer Error: " . $mail->ErrorInfo;
             exit; 
