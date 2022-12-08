@@ -5,5 +5,4 @@
 # webdeveloper
 
 
-
-https://jagadeeshpj.herokuapp.com/
+https://jagadeeshpj.netlify.app/
