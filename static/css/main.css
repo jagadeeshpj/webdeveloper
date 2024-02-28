@@ -185,7 +185,7 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr); }
     #home-a .specials .fas {
-      color: #C7C4BF;
+      color: #7dacfa;
       padding-bottom: 0.4rem; }
   #home-c .process {
     display: grid;
